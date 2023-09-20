@@ -1,0 +1,1 @@
+Pure JS front-end project from ilovecoding.org course material

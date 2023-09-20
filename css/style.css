@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: #6ed6f3;
+}
+
+h1, h2{
+    text-align: center;
+    margin: 0px 0 10px;
+    line-height: 1.3em;
+    color: #212121;
+    font-weight: normal;
+}
+
+.wrap{
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #FFF;
+    border-radius: 20px;
+    border: 7px solid #29b3da;
+}
+
+select#countries{
+    font-size: 1.5em;
+    height: 2em;
+    width: 100%;
+}
+
+.population{
+    text-align: center;
+    font-weight: bold;
+    font-size: 3em;
+}
+
+.age {
+    height: 1.5em;  
+    width: 2.0em;
+    font-size: 1em;
+}
+.year {
+    height: 1.5em;  
+    width: 2.75em;
+    font-size: 1em;
+}
