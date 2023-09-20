@@ -10,11 +10,13 @@ document.addEventListener("DOMContentLoaded",()=> {
         getPopulationForCountry(event.target.selectedOptions[0].innerText)
     })
 
+    // Get the country list from website
     fetch("https://d6wn6bmjj722w.population.io:443/1.0/countries",
     {headers: {accept: 'application/json; charset=utf=8'}})
     .then((res)=>{return res.json()})
     .then((json)=>{displayCountries(json.countries)});
 
+    // This function displays the country list in the select element
     function displayCountries(list){
         list.forEach(country => {
             const option = document.createElement("option");
@@ -23,6 +25,7 @@ document.addEventListener("DOMContentLoaded",()=> {
         });
     }
 
+    //  Get the actual population data for country at given age and year
     function getPopulationForCountry(country){
 
         age = ageInput.value;
@@ -35,6 +38,7 @@ document.addEventListener("DOMContentLoaded",()=> {
         .then((json)=>{displayPopulation(json[age])});
     }
 
+    // display the population number
     function displayPopulation(population){
         populationDiv.textContent = population.total;
     }
